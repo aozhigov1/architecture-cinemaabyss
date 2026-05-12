@@ -1,0 +1,27 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: proxy-service
+
+services:
+  monolith:
+    url: ${MONOLITH_URL:http://localhost:8080}
+  movies:
+    url: ${MOVIES_SERVICE_URL:http://localhost:8081}
+  events:
+    url: ${EVENTS_SERVICE_URL:http://localhost:8082}
+
+migration:
+  enabled: ${GRADUAL_MIGRATION:true}
+  movies-migration-percent: ${MOVIES_MIGRATION_PERCENT:50}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
