@@ -5,7 +5,7 @@ global:
 
 # Image pull secrets
 imagePullSecrets:
-  dockerconfigjson: ewoJImF1dGhzIjogewoJCSJnaGNyLmlvIjogewoJCQkiYXV0aCI6
+  dockerconfigjson: ewoJImF1dGhzIjogewoJCSJodHRwczovL2luZGV4LmRvY2tlci5pby92MS8iOiB7CgkJCSJhdXRoIjogIllXOTZhR2xuYjNZd09EcGtZMnR5WDNCaGRGOXhabmxIYUZWRFRIRTVVbUprYjB0VWFWaElaRkYyYzNaSlNrVT0iCgkJfSwKCQkiaHR0cHM6Ly9pbmRleC5kb2NrZXIuaW8vdjEvYWNjZXNzLXRva2VuIjogewoJCQkiYXV0aCI6ICJZVzk2YUdsbmIzWXdPRHBsZVVwb1lrZGphVTlwU2xOVmVra3hUbWxKYzBsdVVqVmpRMGsyU1d0d1dGWkRTWE5KYlhSd1drTkpOa2x1YUZsaE0wSkRaRVJPZVZZelRYbFNlVEV4V1dwc2MyTkZjRzVqVTBvNUxtVjVTbTlrU0ZKM1kzcHZka3d5YURGWmFUVnJZakpPY2xwWVNYVlpNamwwU1dwd04wbHRWblJaVjJ4elNXcHZhVTFFWjNoTlYwWjFXa2hLYkdWVlFuUlpWMnh6VEc1S01VbHBkMmxqTWxaNll6SnNkbUpzT1hCYVEwazJTV3BWTUUxVVozZE5iVXBvVEZSbk1WbDZRWFJPUjBwcFRYa3hhRTB5VFRKTVYwVjVUVzFOZDA5WFNtaFpWR2MwVDBOSmMwbHVUblprV0VwcVdsTkpOa2x0UmpGa1IyZDNTV2wzYVdSWVRteGpiVFZvWWxkVmFVOXBTbWhpTTNCdllWZGtkbVJxUVRSSmFYZHBaRmhXY0ZwRFNUWkphbHByV1ZSbk1FOUhSWHBNVkVsM1dtMVJkRTVFVlhwTmFURm9UakpSTUV4VVNYZFpWMFpyVGtkVk1rOUVUbXRaVTBvNVRFTktjR016VFdsUGFVcHZaRWhTZDJONmIzWk1NbmgyV2pKc2RVeHRVblpaTW5Sc1kyazFhbUl5TUhaSmFYZHBZek5XYVVscWIybFpXRll3WVVSQ09FNXRVbWhQUkZFMFdWUk5kRTFxUW0xYVF6QXdUbFJOZVV4WFJUTmFSRkYwVFdwQ2FGbFhVVEJhVkZrMFRUSlNhRWxwZDJsWldGWnJTV3B3WWtsdGFEQmtTRUo2VDJrNGRtRklWbWxNYlZKMldUSjBiR05wTldwaU1qQnBURU5LYjJSSVVuZGplbTkyVERKU2Rsa3lkR3hqYVRGM1kyMDVhMHh1Vm5wTWJVWXhaRWRuZDB4dFRuWmlVemt4WXpKV2VXRlhOVzFpZVVwa1RFTktjRmxZVVdsUGFrVXpUbXBuTlUxVVZYbE5SRWx6U1cxV05HTkRTVFpOVkdNeVQwUnJlRTlFWjNkTmFYZHBZekpPZG1OSFZXbFBhVXAyWTBkV2RXRlhVV2RpTWxwdFlrZHNkVnBXT1doWk1rNXNZek5OYVV4RFNtaGxia0ZwVDJsS1RVNUlXWGRhUnpGelZHdEtkMWRXVm5GU01HUm9XV3BDUkUxcmNEQmFNVkp1VjBoSmVGVlliekJhUTBvNUxsQmhkMVZZVVdKc1lTMVNOV1J3WVU5UWFHb3RRazlaY2s1ek5ERXRTVU50TFRsWU1YTk1hMHRWWWxOTmF6aGxaVzFqY21sclluWm9aM2xpTUVSSWNtNXNPSG93UzNselNVUlBjRWh3V0cxYVppMU1VSFo0WWtoUVNWTkZka1ZNYm1ndE1HRkNjVk5sYTAxemVucE5SM1ZNYkdOdWVpMTZXVVY2Y0ZWNU9HODJMVTFSVVU1VllURnNaMEp2VnpOUVgyUldUemhTUjJKV1kyZE9jREJ5YWs1QldrTkJhV1IxZHpBMWFWazNlRGw2UldweFFVNXJWbEZCWjI5TFRuRlZRMU4yZDBRNFFWQlZOalJwWmtGd2RHMU9iUzFtVDNSbVkxcGhiMEY1V1ZRMlZEbFpObFZYVnpkd1RUQjJlVk40U2xKbExVcHdWRzV4ZWtWSmNXWjRWak0yUTFkdVNIaE5PSGt6V0hkYVJqTk5helpFTjFWblRXTlNNMWhwY21KSmMyTlljM2xoYVRoWlVIbGpkSEJ0YTBaclYzQTBORXN4UVdnME1tdE5XVWhMZGtaTWRTMWxUV1oxV1dkRlVVMXlNSEoyTVRCWVFRPT0iCgkJfSwKCQkiaHR0cHM6Ly9pbmRleC5kb2NrZXIuaW8vdjEvcmVmcmVzaC10b2tlbiI6IHsKCQkJImF1dGgiOiAiWVc5NmFHbG5iM1l3T0RwMk1TNU5ZbEY0ZURORFRqTllObmR2YkVFNFdWVnFNM0kwWVdaemVuSjNlVmhSVjFOd1h6QlFjWGRHUTA1YU5XVldaWE5WTm5KSU1XUjNTazFNWmxOZmRsZHBUSGhNYW5KSmFISjJUV2x4UlRoNVIyb3lXRVpqVDNNdUxrdzBkakJrYld4T1FuQlpWV3BIUjJGaU1FTXlTblJuVkdkWWNqRlJlalJrIgoJCX0sCgkJImh0dHBzOi8vaW5kZXguZG9ja2VyLmlvL3YxL3JlZnJlc2gtdG9rZW4iOiB7CgkJCSJhdXRoIjogIllXOTZhR2xuYjNZeE9tZG9jRjl4UjNGemNUSnJWR1JRWkd4blpHMUZSemxNTjA5NVlsVTJPVVZJYmpNeVZHUkRTVlE9IgoJCX0KCX0sCgkiY3VycmVudENvbnRleHQiOiAiZGVmYXVsdCIKfQ==
 # Database configuration
 database:
   host: postgres
@@ -33,7 +33,7 @@ database:
 monolith:
   enabled: true
   image:
-    repository: ghcr.io/db-exp/cinemaabysstest/monolith
+    repository: ghcr.io/aozhigov1/architecture-cinemaabyss/monolith
     tag: latest
     pullPolicy: Always
   replicas: 1
@@ -53,7 +53,7 @@ monolith:
 proxyService:
   enabled: true
   image:
-    repository: ghcr.io/db-exp/cinemaabysstest/proxy-service
+    repository: ghcr.io/aozhigov1/architecture-cinemaabyss/proxy-service
     tag: latest
     pullPolicy: Always
   replicas: 1
@@ -73,7 +73,7 @@ proxyService:
 moviesService:
   enabled: true
   image:
-    repository: ghcr.io/db-exp/cinemaabysstest/movies-service
+    repository: ghcr.io/aozhigov1/architecture-cinemaabyss/movies-service
     tag: latest
     pullPolicy: Always
   replicas: 1
@@ -93,7 +93,7 @@ moviesService:
 eventsService:
   enabled: true
   image:
-    repository: ghcr.io/db-exp/cinemaabysstest/events-service
+    repository: ghcr.io/aozhigov1/architecture-cinemaabyss/events-service
     tag: latest
     pullPolicy: Always
   replicas: 1
@@ -166,20 +166,41 @@ ingress:
   annotations:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/use-regex: "true"
   hosts:
     - host: cinemaabyss.example.com
       paths:
-        - path: /
-          pathType: Prefix
-          service: proxy-service
-          port: 80
         - path: /api/events
           pathType: Prefix
           service: events-service
           port: 8082
+        - path: /api/movies
+          pathType: Prefix
+          service: movies-service
+          port: 8081
+        - path: /api/users
+          pathType: Prefix
+          service: monolith
+          port: 8080
+        - path: /api/payments
+          pathType: Prefix
+          service: monolith
+          port: 8080
+        - path: /api/subscriptions
+          pathType: Prefix
+          service: monolith
+          port: 8080
+        - path: /health
+          pathType: Prefix
+          service: monolith
+          port: 8080
+        - path: /
+          pathType: Prefix
+          service: proxy-service
+          port: 80
 
 # Application configuration
 config:
   # Strangler Fig configuration
   gradualMigration: "true"
-  moviesMigrationPercent: "100"
+  moviesMigrationPercent: "75"

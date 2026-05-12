@@ -4,8 +4,8 @@
 
 1. Спроектируйте to be архитектуру КиноБездны, разделив всю систему на отдельные домены и организовав интеграционное взаимодействие и единую точку вызова сервисов.
 Результат представьте в виде контейнерной диаграммы в нотации С4.
-Добавьте ссылку на файл в этот шаблон
-[ссылка на файл](ссылка)
+Ссылку на файл:
+[to-be-c4-container](docs/to-be-c4-container.puml)
 
 # Задание 2
 
@@ -59,6 +59,14 @@
 Необходимые тесты для проверки этого API вызываются при запуске npm run test:local из папки tests/postman 
 Приложите скриншот тестов и скриншот состояния топиков Kafka из UI http://localhost:8090 
 
+### Отчет
+#### Тесты
+![tests.png](docs/images/tests.png)
+
+#### Kafka
+![kafka_topics.png](docs/images/kafka_topics.png)
+![kafka_comsumers.png](docs/images/kafka_comsumers.png)
+
 # Задание 3
 
 Команда начала переезд в Kubernetes для лучшего масштабирования и повышения надежности. 
@@ -109,6 +117,11 @@ jobs:
 Как только сборка отработает и в github registry появятся ваши образы, можно переходить к блоку настройки Kubernetes
 Успешным результатом данного шага является "зеленая" сборка и "зеленые" тесты
 
+#### Отчет
+##### Тесты
+![github_tests.png](docs/images/github_tests.png)
+##### Сборка
+![github_docker.png](docs/images/github_docker.png)
 
 ### Proxy в Kubernetes
 
@@ -275,6 +288,8 @@ cat .docker/config.json | base64
 #### Шаг 3
 Добавьте сюда скриншота вывода при вызове https://cinemaabyss.example.com/api/movies и  скриншот вывода event-service после вызова тестов.
 
+![img.png](docs/images/kuber_api_movies.png)
+![img_1.png](docs/images/kuber_tests.png)
 
 # Задание 4
 Для простоты дальнейшего обновления и развертывания вам как архитектуру необходимо так же реализовать helm-чарты для прокси-сервиса и проверить работу 
@@ -349,6 +364,9 @@ minikube tunnel
 Потом вызовите 
 https://cinemaabyss.example.com/api/movies
 и приложите скриншот развертывания helm и вывода https://cinemaabyss.example.com/api/movies
+
+![helm_install.png](docs/images/helm_install.png)
+![helm_api_movies.png](docs/images/helm_api_movies.png)
 
 ## Удаляем все
 

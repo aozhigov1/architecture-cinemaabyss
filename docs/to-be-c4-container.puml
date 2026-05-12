@@ -1,0 +1,58 @@
+@startuml
+title Kinobezdna To-Be Architecture (C4 Container)
+!include lib/C4_Container.puml
+
+Person(webUser, "Web User", "Web App")
+Person(mobileUser, "Mobile User", "Mobile App")
+Person(tvUser, "Smart TV User", "TV App")
+
+System_Boundary(cinemaSystem, "Kinobezdna") {
+    Container(apiGateway, "API Gateway", "Kong", "Entry point for all users\nRouting, auth, rate limiting")
+    Container(authService, "Auth Service", "Go + REST", "Registration, auth, profiles\nJWT")
+    Container(metadataService, "Catalog & Metadata Service", "Go + gRPC", "Content catalog, metadata, ratings")
+    Container(contentService, "Content & Streaming Service", "Go + gRPC", "Video streaming")
+    Container(billingService, "Subscription & Billing Service", "Go + REST/gRPC", "Subscriptions, payments")
+    Container(searchService, "Search & Discovery Service", "Go + REST", "Full-text search\nFiltering, geo-location")
+    Container(recommendationsService, "Recommendations Service", "Go + REST/gRPC", "ML recommendations, personalization")
+}
+
+Container_Boundary(infrastructure, "Infrastructure") {
+    ContainerDb(postgres, "PostgreSQL", "Sharded", "Users, Content, Billing")
+    ContainerDb(opensearch, "OpenSearch", "Cluster", "Search Index")
+    ContainerDb(redis, "Redis Cluster", "Cache", "Sessions, hot data")
+    ContainerQueue(kafka, "Apache Kafka", "Event Streaming", "Service events")
+    ContainerDb(s3, "S3 Storage", "Object Storage", "Video files")
+}
+
+Container_Ext(paymentSystem, "Payment Systems", "REST")
+Container_Ext(onlineCinemas, "Online Cinemas", "REST")
+Container_Ext(recSystem, "Recommendation System", "REST/gRPC")
+
+Rel(webUser, apiGateway, "HTTPS", "JSON/REST")
+Rel(mobileUser, apiGateway, "HTTPS", "JSON/REST")
+Rel(tvUser, apiGateway, "HTTPS", "JSON/REST")
+
+Rel(apiGateway, authService, "REST", "Validate token")
+Rel(apiGateway, metadataService, "gRPC", "Get metadata")
+Rel(apiGateway, contentService, "gRPC", "Get stream URL")
+Rel(apiGateway, billingService, "REST/gRPC", "Manage subscriptions")
+Rel(apiGateway, searchService, "REST", "Search query")
+Rel(apiGateway, recommendationsService, "REST/gRPC", "Get recommendations")
+
+Rel(authService, postgres, "JDBC", "Query")
+Rel(metadataService, postgres, "JDBC", "Query")
+Rel(metadataService, redis, "Redigo", "Cache metadata")
+Rel(billingService, postgres, "JDBC", "Query")
+Rel(searchService, opensearch, "HTTPS", "Search index")
+Rel(contentService, s3, "HTTPS", "Get/Put video")
+
+Rel(authService, kafka, "Kafka", "Publish events")
+Rel(metadataService, kafka, "Kafka", "Publish events")
+Rel(billingService, kafka, "Kafka", "Publish events")
+Rel(contentService, kafka, "Kafka", "Publish events")
+Rel(recommendationsService, kafka, "Kafka", "Publish events")
+
+Rel(billingService, paymentSystem, "HTTPS", "Process payments")
+Rel(contentService, onlineCinemas, "HTTPS", "Fetch content")
+Rel(recommendationsService, recSystem, "HTTPS/REST/gRPC", "Get recommendations")
+@enduml
